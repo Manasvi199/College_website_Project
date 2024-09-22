@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  
+  <title><u>College Gallery</u></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+	  }
+	  
+	 body{ background-image:url('image/bg.jpg');
+	  background-size: cover;
+      background-position: center;
+
+      }
+
+    header {
+      background-color:purple;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gallery-container {
+      max-width: 1000px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.1);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+    }
+
+    .lightbox-image {
+      max-width: 90%;
+      max-height: 90%;
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>College Gallery</h1>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item" onclick="openLightbox('image1_large.jpg')">
+      <img class="gallery-image" src="image\image1" alt="Image 1">
+      <div class="gallery-caption">Image 1</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image2_large.jpg')">
+      <img class="gallery-image" src="image\2.jpg" alt="Image 2">
+      <div class="gallery-caption">Image 2</div>
+    </div>
+    
+	
+    <div class="gallery-item" onclick="openLightbox('image3_large.jpg')">
+      <img class="gallery-image" src="image\3.jpg" alt="Image 3">
+      <div class="gallery-caption">Image 3</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image4_large.jpg')">
+      <img class="gallery-image" src="image\4.jpg" alt="Image 4">
+      <div class="gallery-caption">Image 4</div>
+    </div>
+	
+	
+    <div class="gallery-item" onclick="openLightbox('image5_large.jpg')">
+      <img class="gallery-image" src="image\5.jpg" alt="Image 5">
+      <div class="gallery-caption">Image 5</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image6_large.jpg')">
+      <img class="gallery-image" src="image\6.jpg" alt="Image 6">
+      <div class="gallery-caption">Image 6</div>
+    </div>
+	
+	<div class="gallery-item" onclick="openLightbox('image7_large.jpg')">
+      <img class="gallery-image" src="image\7.jpg" alt="Image 7">
+      <div class="gallery-caption">Image 7</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image8_large.jpg')">
+      <img class="gallery-image" src="image\8.jpg" alt="Image 8">
+      <div class="gallery-caption">Image 8</div>
+    </div>
+    
+	
+    <div class="gallery-item" onclick="openLightbox('image9_large.jpg')">
+      <img class="gallery-image" src="image\9.jpg" alt="Image 9">
+      <div class="gallery-caption">Image 9</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image10_large.jpg')">
+      <img class="gallery-image" src="image\10.jpg" alt="Image 10">
+      <div class="gallery-caption">Image 10</div>
+    </div>
+	
+	
+    <div class="gallery-item" onclick="openLightbox('image11_large.jpg')">
+      <img class="gallery-image" src="image\11.jpg" alt="Image 11">
+      <div class="gallery-caption">Image 11</div>
+    </div>
+	
+    <div class="gallery-item" onclick="openLightbox('image12_large.jpg')">
+      <img class="gallery-image" src="image\12.jpg" alt="Image 12">
+      <div class="gallery-caption">Image 12</div>
+    </div>
+  </div>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img class="lightbox-image" src="" alt="Large Image">
+  </div>
+
+  <script>
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+
+    function openLightbox(imageUrl) {
+      lightbox.style.display = 'flex';
+      lightboxImage.src = imageUrl;
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightboxImage.src = '';
+    }
+  </script>
+  
+  
+</body>
+
+</html>
