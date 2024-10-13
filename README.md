@@ -12,7 +12,7 @@ A website for MIT World Peace University, Kothrud, providing detailed informatio
 - [File Structure](#file-structure)
 
 ## Demo
-Check out the live demo of the Food Munch app [here](https://manasvi199.github.io/Food-Munch/).
+Check out the live demo of the Food Munch app [here](https://manasvi199.github.io/College_website_Project/).
 
 ## Overview
 This website includes pages for various aspects of MIT World Peace University:
